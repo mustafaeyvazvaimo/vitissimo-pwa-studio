@@ -1,0 +1,39 @@
+.root {
+    display: grid;
+    padding: 1rem;
+    padding-bottom: 1rem;
+}
+
+.radio_group {
+    display: grid;
+}
+
+.payment_method {
+    padding-bottom: 1rem;
+    border-bottom: var(--vitissimo-global-border);
+}
+
+.payment_method:not(:first-child) {
+    padding-top: 1rem;
+}
+
+.payment_method:last-of-type {
+    border-bottom-width: 0;
+}
+
+.radio_label {
+    font-weight: var(--vitissimo-global-fontWeight-bold);
+    justify-self: start;
+}
+
+.payment_errors {
+    display: grid;
+    gap: 0.5em;
+    color: rgb(var(--venia-global-color-error));
+}
+
+@media screen and (min-width: 480px) {
+    .root {
+        padding: 2rem;
+    }
+}

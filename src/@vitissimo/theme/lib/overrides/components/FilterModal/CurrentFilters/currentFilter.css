@@ -1,0 +1,20 @@
+.root {
+    align-items: center;
+    background-color: rgb(var(--vitissimo-global-color-black));
+    border-radius: 6px;
+    color: rgb(var(--vitissimo-global-color-white));
+    display: inline-grid;
+    font-weight: var(--vitissimo-global-fontWeight-bold);
+    font-size: var(--vitissimo-typography-body-L-fontSize);
+    gap: 0.15rem;
+    grid-auto-flow: column;
+    justify-content: center;
+    min-height: 1.5rem;
+    padding: 0.5rem 0.75rem 0.5rem 0.5rem;
+    white-space: nowrap;
+}
+
+.text {
+    padding-top: 6px;
+    padding-left: 5px;
+}

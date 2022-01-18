@@ -1,0 +1,26 @@
+.wrapper {
+    display: inline-grid;
+    grid-auto-flow: column;
+    grid-template-areas: 'input icon';
+    grid-template-columns: auto 2.25rem;
+    height: 2.25rem;
+}
+
+.input,
+.input_error {
+    composes: input from '~@magento/venia-ui/lib/components/Field/field.css';
+
+    grid-area: input-start / input-start / input-end / icon-end;
+    padding-top: 8px;
+    padding-right: calc(2.25rem - 1px);
+    border: var(--vitissimo-global-input-border);
+}
+
+.input:disabled {
+    pointer-events: none;
+    color: rgb(var(--vitissimo-global-color-gray-darker));
+}
+
+.input_error {
+    background-color: rgb(var(--vitissimo-global-color-red-8));
+}

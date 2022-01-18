@@ -1,0 +1,98 @@
+.root {
+    align-content: center;
+    display: grid;
+    row-gap: 0.5rem;
+    border: var(--vitissimo-global-border-small);
+    padding: 1rem;
+    border-radius: 2px;
+}
+
+.root_disabled {
+    composes: root;
+
+    opacity: 0.5;
+}
+
+.headerContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.remove {
+    margin-bottom: 0.5rem;
+}
+
+.name {
+    font-size: var(--vitissimo-typography-detail-XL-fontSize);
+    font-weight: var(--vitissimo-global-fontWeight-bold);
+}
+
+.detail {
+    color: rgb(var(--vitissimo-global-color-text));
+    font-size: var(--vitissimo-typography-detail-L-fontSize);
+}
+
+.option {
+    composes: detail;
+}
+
+.option span {
+    display: flex;
+    flex-direction: row;
+}
+
+.outOfStock {
+    color: rgb(var(--vitissimo-global-color-error));
+    font-size: var(--vitissimo-typography-detail-L-fontSize);
+}
+
+.priceContainer {
+    font-size: var(--vitissimo-typography-detail-XL-fontSize);
+}
+
+.image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.image_disabled {
+    composes: image;
+
+    opacity: 0.6;
+}
+
+.options {
+    height: 2rem;
+}
+
+.addToCart {
+    composes: root_highPriority from '../Button/button.css';
+
+    justify-self: center;
+}
+
+.deleteItem {
+    margin: 0;
+    float: right;
+}
+
+.actionWrap {
+    display: flex;
+    justify-content: space-between;
+}
+
+.moreActions {
+    align-items: center;
+    background-color: rgb(var(--vitissimo-global-color-gray));
+    border-radius: 50%;
+    display: none;
+    padding: 0.125rem;
+}
+
+@media screen and (max-width: 480px) {
+    .addToCart {
+        min-width: 100%;
+    }
+}

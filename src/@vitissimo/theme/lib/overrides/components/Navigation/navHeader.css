@@ -1,0 +1,6 @@
+.title {
+    align-items: center;
+    display: inline-flex;
+    color: rgb(var(--vitissimo-global-color-white));
+    padding-top: 0.5rem;
+}

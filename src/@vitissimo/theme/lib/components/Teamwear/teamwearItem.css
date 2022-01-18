@@ -1,0 +1,73 @@
+.team {
+    margin: 1rem auto;
+    width: 90%;
+    padding: 0.5rem;
+    border-radius: 0.375rem;
+    box-shadow: 0 1px 3px 1px rgb(var(--vitissimo-global-color-gray-9));
+    /* cursor: pointer; */
+    transition: transform 350ms;
+}
+
+.team:hover {
+    transform: scale(1.03);
+}
+
+.link {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.team_description {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    text-align: left;
+    justify-content: space-between;
+    align-content: space-between;
+}
+
+.team_logo {
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 100px;
+    height: 100px;
+}
+
+.team_name {
+    color: rgb(var(--vitissimo-global-color-red));
+    font-size: var(--vitissimo-global-typography-heading-S-fontSize);
+    font-weight: var(--vitissimo-global-fontWeight-bold);
+    text-transform: uppercase;
+    padding-top: 0.375rem;
+    margin-left: 1.5rem;
+    text-align: right;
+}
+
+.team_address {
+    text-align: right;
+    font-size: var(--vitissimo-typography-body-S-fontSize);
+}
+
+@media screen and (min-width: 480px) {
+    .team {
+        margin: 1rem auto;
+        width: 66%;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .team {
+        margin: 1rem auto;
+        width: 45%;
+        padding: 1rem;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .team {
+        margin: 1rem auto;
+        width: 30%;
+    }
+}

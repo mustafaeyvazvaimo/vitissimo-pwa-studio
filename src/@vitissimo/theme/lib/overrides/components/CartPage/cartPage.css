@@ -1,0 +1,58 @@
+.root {
+    padding: 2.5rem 0.5rem;
+    max-width: var(--vitissimo-global-maxWidth);
+    margin: 0 auto;
+}
+
+.body {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: 100%;
+    grid-template-areas:
+        'items'
+        'summary';
+}
+
+.heading_container {
+    display: grid;
+    margin-bottom: 1rem;
+    row-gap: 1rem;
+}
+
+.heading {
+    line-height: 1.25em;
+}
+
+.stockStatusMessageContainer:empty {
+    display: none;
+}
+
+.items_container {
+    grid-area: items;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.summary_container {
+    grid-area: summary;
+    height: 100%;
+}
+
+@media screen and (min-width: 480px) {
+    .root {
+        padding: 2.5rem 1rem;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .body {
+        grid-template-columns: 1fr 18rem;
+        grid-template-areas: 'items summary';
+    }
+
+    .summary_contents {
+        position: sticky;
+        top: 12rem;
+    }
+}

@@ -1,0 +1,10 @@
+.root {
+    composes: root from '~@magento/venia-ui/lib/components/clickable.css';
+
+    line-height: 1.25rem;
+    max-width: 100%;
+}
+
+.root:hover {
+    color: rgb(var(--vitissimo-global-color-red));
+}

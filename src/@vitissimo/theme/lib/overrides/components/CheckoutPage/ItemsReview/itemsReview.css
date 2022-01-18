@@ -1,0 +1,28 @@
+.items_review_container {
+    min-height: 2rem;
+    border: var(--vitissimo-global-border);
+}
+
+.items_container {
+    display: grid;
+}
+
+.total_quantity {
+    font-weight: var(--vitissimo-global-fontWeight-bold);
+    border-bottom: var(--vitissimo-global-border);
+    padding: 1rem;
+}
+
+.total_quantity_amount {
+    color: rgb(var(--vitissimo-global-color-red));
+}
+
+@media screen and (min-width: 480px) {
+    .items_review_container {
+        border-radius: 0.375rem;
+    }
+
+    .total_quantity {
+        padding: 1rem 2rem;
+    }
+}

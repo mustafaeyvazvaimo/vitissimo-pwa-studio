@@ -1,0 +1,88 @@
+.root {
+    composes: root from '~@magento/venia-ui/lib/components/clickable.css';
+
+    background: transparent;
+    border: 2px solid transparent;
+    border-radius: 10rem;
+    font-weight: var(--vitissimo-global-fontWeight-bold);
+    max-width: 100%;
+    margin: 0;
+    padding: calc(0.5rem + 3px) 1.5rem calc(0.5rem - 1px);
+    outline: none;
+    text-transform: uppercase;
+    transition-duration: 256ms;
+    transition-property: background-color, border-color, color;
+    transition-timing-function: var(--vitissimo-global-anim-standard);
+    white-space: nowrap;
+}
+
+.root:active {
+    transition-duration: 128ms;
+}
+
+.root:disabled,
+.root:hover:disabled {
+    pointer-events: none;
+}
+
+/* derived classes */
+.root_lowPriority {
+    composes: root;
+
+    color: rgb(var(--vitissimo-global-color-red));
+    border: var(--vitissimo-global-button-border-red);
+}
+.root_lowPriority:hover {
+    background: rgb(var(--vitissimo-global-color-red));
+    color: rgb(var(--vitissimo-global-color-white));
+}
+.root_lowPriorityNegative {
+    composes: root;
+
+    background: rgb(var(--vitissimo-global-color-gray-2));
+    color: rgb(var(--vitissimo-global-color-gray-7));
+    border: var(--vitissimo-global-button-border-gray);
+}
+
+.root_normalPriority {
+    composes: root;
+
+    color: rgb(var(--vitissimo-global-color-black));
+    border-radius: unset;
+    padding: calc(0.5rem + 1px) 0;
+    font-weight: normal;
+    text-transform: unset;
+}
+.root_normalPriority:hover {
+    color: rgb(var(--vitissimo-global-color-red));
+}
+.root_normalPriorityNegative {
+    composes: root;
+
+    color: rgb(var(--vitissimo-global-color-gray-7));
+}
+
+.root_highPriority {
+    composes: root;
+
+    background-color: rgb(var(--vitissimo-global-color-red));
+    border: var(--vitissimo-global-button-border-red);
+    color: rgb(var(--vitissimo-global-color-white));
+}
+.root_highPriority:hover {
+    background: rgb(var(--vitissimo-global-color-white));
+    color: rgb(var(--vitissimo-global-color-red));
+}
+.root_highPriorityNegative {
+    composes: root_lowPriorityNegative;
+}
+
+/* content from span element */
+.content {
+    align-items: center;
+    display: inline-grid;
+    gap: 0.35rem;
+    grid-auto-flow: column;
+    justify-content: center;
+    justify-items: center;
+}

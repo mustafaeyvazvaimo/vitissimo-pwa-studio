@@ -1,0 +1,33 @@
+.root {
+    align-items: center;
+    border-bottom: var(--vitissimo-global-border);
+    display: flex;
+    margin: 0 1.25rem;
+}
+
+.root:last-child {
+    border-bottom: unset;
+}
+
+.divider {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    height: 3px;
+    background: rgb(var(--vitissimo-global-color-red));
+}
+
+.target {
+    align-items: center;
+    display: flex;
+    flex: auto;
+    height: 3.5rem;
+    justify-content: flex-start;
+    margin: 0 -1.25rem;
+    padding: 0 1.5rem;
+    width: 100%;
+}
+
+.text {
+    font-size: var(--vitissimo-global-fontSize-300);
+}

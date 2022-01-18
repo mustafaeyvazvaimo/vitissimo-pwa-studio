@@ -1,0 +1,4 @@
+.root {
+    color: rgb(var(--vitissimo-global-color-red));
+    margin-top: 1rem;
+}

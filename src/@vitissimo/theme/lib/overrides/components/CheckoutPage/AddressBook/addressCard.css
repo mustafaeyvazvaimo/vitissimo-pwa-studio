@@ -1,0 +1,88 @@
+.root {
+    align-content: flex-start;
+    border: var(--vitissimo-global-border);
+    border-radius: 0.375rem;
+    box-shadow: none;
+    cursor: pointer;
+    display: grid;
+    font-size: 1rem;
+    padding: 1rem 1.25rem;
+    position: relative;
+    row-gap: 0.5rem;
+    transition: border-color 384ms var(--vitissimo-global-anim-in);
+    outline: none;
+}
+
+@media screen and (min-width: 1024px) {
+    .root {
+        padding: 1.25rem 2rem;
+    }
+}
+
+.root_selected {
+    composes: root;
+    border-color: rgb(var(--vitissimo-global-color-red));
+    cursor: default;
+}
+
+.root_updated {
+    composes: root_selected;
+    animation: flash var(--vitissimo-global-anim-bounce) 640ms 2;
+}
+
+.root:hover {
+    border-color: rgb(var(--vitissimo-global-color-red));
+}
+
+.defaultCard {
+    grid-area: 1 / 1;
+}
+
+.editButton {
+    padding: 1rem;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+@media screen and (min-width: 1024px) {
+    .editButton {
+        right: 0.375rem;
+        top: 0.375rem;
+    }
+}
+
+.editIcon {
+    transition: fill 384ms var(--vitissimo-global-anim-standard);
+}
+
+.defaultBadge {
+    width: max-content;
+    padding: 0.25rem 0;
+    margin-bottom: 0.25rem;
+    color: rgb(var(--vitissimo-global-color-red));
+    border-radius: 0.375rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.name {
+    font-weight: 600;
+}
+
+.address {
+    display: grid;
+    gap: 0.5rem;
+}
+
+@keyframes flash {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1;
+    }
+}

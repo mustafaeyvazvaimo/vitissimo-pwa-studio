@@ -1,0 +1,40 @@
+.root {
+    margin-left: 0.85rem;
+    margin-top: 1.5rem;
+    font-size: 0.875rem;
+
+    /* Permanent height to prevent pop-in. */
+    height: 0.9rem;
+    padding-top: 1px;
+
+    /* Show ellipses when overflowing. */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.text {
+    padding: 0.25rem 0.18rem;
+    line-height: var(--vitissimo-global-lineHeight-100);
+}
+
+.divider {
+    composes: text;
+
+    font-weight: var(--vitissimo-global-fontWeight-bold);
+    color: rgb(var(--vitissimo-global-color-red));
+}
+
+.link {
+    composes: text;
+    /* text-decoration: underline; */
+    font-weight: var(--vitissimo-global-fontWeight-bold);
+}
+
+.link:hover {
+    color: rgb(var(--vitissimo-global-color-red));
+}
+
+.currentCategory {
+    composes: text;
+}

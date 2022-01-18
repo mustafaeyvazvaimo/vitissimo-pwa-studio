@@ -1,0 +1,60 @@
+.hidden {
+    opacity: 0;
+    transform: translate3d(0, -2rem, 0);
+    transition-duration: 192ms;
+    transition-timing-function: var(--vitissimo-global-anim-out);
+    visibility: hidden;
+}
+
+.visible {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+    transition-duration: 224ms;
+    transition-timing-function: var(--vitissimo-global-anim-in);
+    visibility: visible;
+}
+
+.root {
+    background-color: rgb(var(--vitissimo-global-color-white));
+    border-radius: 3px;
+    border-top-style: none;
+    box-shadow: var(--vitissimo-global-box-shadow-gray);
+    display: grid;
+    font-size: var(--vitissimo-global-fontSize-100);
+    gap: 0.75rem;
+    left: 0;
+    padding: 1rem 1rem;
+    position: absolute;
+    right: 0;
+    top: 2.55rem;
+    transition-property: opacity, transform, visibility;
+    z-index: 2;
+}
+
+.root_hidden {
+    composes: root hidden;
+}
+
+.root_visible {
+    composes: root visible;
+}
+
+.message {
+    color: rgb(var(--vitissimo-global-color-text-alt));
+    padding: 0 1rem;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.message:empty {
+    padding: 0;
+}
+
+.suggestions {
+    display: grid;
+    gap: 0.5rem;
+}
+
+.suggestions:empty {
+    display: none;
+}

@@ -1,0 +1,35 @@
+.root {
+    max-width: 250px;
+    padding: 20px;
+    margin-right: 25px;
+    text-align: left;
+}
+
+.root:last-child {
+    margin-right: unset;
+}
+
+.heading {
+    font-weight: 600;
+    font-size: var(--vitissimo-global-fontSize-300);
+    border-bottom: var(--vitissimo-global-border-bottom);
+}
+
+.link {
+    white-space: nowrap;
+}
+
+.link:hover,
+.link:focus,
+.active {
+    text-decoration: none;
+    color: rgb(var(--vitissimo-global-color-red));
+}
+
+.subMenu {
+    margin-top: 21px;
+}
+
+.subMenuItem {
+    margin-bottom: 12px;
+}

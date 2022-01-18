@@ -1,0 +1,5 @@
+.root {
+    background-color: rgb(var(--vitissimo-global-color-black));
+    padding-top: 0.9rem;
+    height: 4rem;
+}

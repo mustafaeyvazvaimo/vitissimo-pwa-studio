@@ -1,0 +1,21 @@
+.root {
+    padding-top: 1.125rem;
+}
+
+.title {
+    font-weight: var(--vitissimo-global-fontWeight-bold);
+    text-align: center;
+    padding-bottom: 1rem;
+    border-bottom: var(--vitissimo-global-border);
+}
+
+.info {
+    padding: 1rem 0 0 0;
+    line-height: var(--vitissimo-global-lineHeight-200);
+}
+
+@media screen and (min-width: 1024px) {
+    .info {
+        padding: 1rem 1rem 0 1rem;
+    }
+}

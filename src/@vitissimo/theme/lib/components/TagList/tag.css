@@ -1,0 +1,20 @@
+.root {
+    padding-top: 4px;
+    color: rgb(var(--vitissimo-global-color-black));
+    font-size: var(--vitissimo-global-fontSize-100);
+    margin-right: 7px;
+    margin-bottom: 15px;
+}
+
+.link {
+    border: var(--vitissimo-global-input-border);
+    padding: 5px 9px;
+    padding-top: 8px;
+    margin: 0;
+    border-radius: 6px;
+}
+
+.link:hover {
+    color: rgb(var(--vitissimo-global-color-white));
+    background: rgb(var(--vitissimo-global-color-red));
+}

@@ -1,0 +1,12 @@
+.root {
+    composes: root from '~@magento/venia-ui/lib/components/clickable.css';
+
+    height: 3rem;
+    min-width: 2.75rem;
+}
+
+@media screen and (min-width: 1024px) {
+    .root {
+        display: none;
+    }
+}

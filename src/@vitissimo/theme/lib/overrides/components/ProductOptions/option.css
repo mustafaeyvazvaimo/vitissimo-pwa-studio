@@ -1,0 +1,34 @@
+.root {
+    border-top: var(--vitissimo-global-border);
+    border-bottom: var(--vitissimo-global-border);
+    margin-top: -2px;
+    padding: 1.75rem 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.title {
+    font-size: var(--vitissimo-typography-body-L-fontSize);
+    font-weight: var(--vitissimo-global-fontWeight-bold);
+    line-height: 1.5;
+    margin: 0.2rem;
+    margin-bottom: 1rem;
+}
+
+.selection {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin: 0.2rem;
+    margin-top: 1rem;
+    display: flex;
+    height: 100%;
+}
+
+.selection dd {
+    font-weight: var(--vitissimo-global-fontWeight-bold);
+    letter-spacing: 1px;
+}
+
+.selectionLabel {
+    margin-right: 1rem;
+}

@@ -1,0 +1,71 @@
+.root {
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
+    justify-content: center;
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.carouselContainer {
+    margin: auto;
+    width: 100%;
+    align-self: center;
+    display: flex;
+    flex-direction: row;
+}
+
+.imageContainer {
+    width: 100%;
+    height: auto;
+}
+
+.currentImage {
+    width: 100%;
+    height: auto;
+    max-height: 100%;
+}
+
+.currentImage_placeholder {
+    composes: currentImage;
+
+    background-color: rgb(var(--vitissimo-global-color-gray));
+}
+
+.previousButton,
+.nextButton {
+    display: flex;
+    outline: none;
+    z-index: 1;
+    align-self: center;
+    width: 2.5rem;
+}
+
+.previousButton {
+    justify-content: flex-start;
+}
+
+.nextButton {
+    justify-content: flex-end;
+}
+
+.nextButton:focus,
+.previousButton:focus {
+    color: rgb(var(--vitissimo-global-color-red));
+}
+
+.thumbnailList {
+    align-content: stretch;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 1rem;
+    gap: 1rem;
+    z-index: 1;
+}
+
+@media screen and (min-width: 1024px) {
+    .currentImage {
+        padding: 0 5rem;
+    }
+}

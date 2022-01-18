@@ -1,0 +1,16 @@
+.root {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    font-size: var(--vitissimo-global-fontSize-100);
+    padding: 0 0.5rem;
+    border-top: var(--vitissimo-global-border);
+}
+
+.root p {
+    margin: 1rem 0;
+}
+
+.tags {
+    margin-bottom: 0.5rem;
+}

@@ -1,0 +1,20 @@
+.root {
+    align-items: center;
+    border: 1px solid rgb(var(--vitissimo-global-color-black));
+    border-radius: 2px;
+    display: flex;
+    justify-content: center;
+    min-height: 2rem;
+    outline: none;
+    position: relative;
+    padding-top: 5px;
+    font-weight: var(--vitissimo-global-fontWeight-bold);
+}
+
+.root_active {
+    composes: root;
+
+    background: rgb(var(--vitissimo-global-color-red));
+    color: rgb(var(--vitissimo-global-color-white));
+    border: var(--vitissimo-global-input-border);
+}

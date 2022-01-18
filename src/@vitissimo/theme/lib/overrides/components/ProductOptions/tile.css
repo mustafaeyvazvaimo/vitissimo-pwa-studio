@@ -1,0 +1,30 @@
+.root {
+    composes: root from '~@magento/venia-ui/lib/components/clickable.css';
+
+    border: 1px solid rgb(var(--vitissimo-global-color-red));
+    color: rgb(var(--vitissimo-global-color-text));
+    border-radius: 5px;
+    height: 3rem;
+    min-width: 3.5rem;
+    padding: 0 0.5rem;
+    padding-top: 3px;
+    margin: 0.2rem;
+}
+
+.root_selected {
+    composes: root;
+
+    background-color: rgb(var(--vitissimo-global-color-red));
+    color: rgb(var(--vitissimo-global-color-white));
+}
+.root_focused {
+    composes: root;
+}
+.root_selected_focused {
+    composes: root_selected;
+}
+
+.root:hover {
+    background-color: rgb(var(--vitissimo-global-color-red));
+    color: rgb(var(--vitissimo-global-color-white));
+}

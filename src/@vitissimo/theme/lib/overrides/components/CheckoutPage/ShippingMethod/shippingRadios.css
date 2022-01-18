@@ -1,0 +1,28 @@
+.error {
+    color: rgb(var(--vitissimo-global-color-error));
+    line-height: var(--vitissimo-global-lineHeight-300);
+}
+
+.radioLabel {
+    display: grid;
+    grid-template-columns: 100%;
+    gap: 0.5rem;
+}
+
+.radioMessage {
+    display: none;
+}
+
+.radioRoot {
+    composes: root from '~@magento/venia-ui/lib/components/RadioGroup/radioGroup.css';
+
+    grid-template-columns: auto;
+}
+
+@media screen and (min-width: 768px) {
+    .radioLabel {
+        grid-template-columns: auto auto;
+        gap: 1rem 0.5rem;
+        justify-content: start;
+    }
+}

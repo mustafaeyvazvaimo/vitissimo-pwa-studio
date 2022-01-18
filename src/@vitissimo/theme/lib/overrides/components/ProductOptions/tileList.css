@@ -1,0 +1,11 @@
+.root {
+    width: auto;
+    font-size: var(--vitissimo-global-fontSize-200);
+    outline: none;
+    border-radius: 5px;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+}

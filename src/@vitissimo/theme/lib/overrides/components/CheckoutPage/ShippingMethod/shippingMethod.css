@@ -1,0 +1,37 @@
+.root {
+    border: none;
+    border-radius: 0px;
+    border-bottom: var(--vitissimo-global-border);
+    padding: 2rem 0rem;
+    display: grid;
+    row-gap: 1rem;
+}
+
+.done {
+    composes: root;
+
+    border: var(--vitissimo-global-border);
+    padding: 1rem;
+}
+
+.editingHeading {
+    text-transform: uppercase;
+}
+
+.form {
+    display: grid;
+    grid-template-rows: 1fr auto;
+    row-gap: 1.5rem;
+}
+
+.formButtons {
+    display: flex;
+    justify-content: center;
+}
+
+@media screen and (min-width: 480px) {
+    .done {
+        border-radius: 0.375rem;
+        padding: 2rem;
+    }
+}

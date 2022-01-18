@@ -1,0 +1,38 @@
+.root {
+    text-align: center;
+    padding: 2rem 0;
+    max-width: var(--vitissimo-global-maxWidth);
+}
+
+.signin {
+    margin-bottom: 2rem;
+    padding: 0 1rem;
+    line-height: var(--vitissimo-global-lineHeight-200);
+}
+
+.signin a {
+    color: rgb(var(--vitissimo-global-color-red));
+    font-weight: var(--vitissimo-global-fontWeight-bold);
+}
+
+.signin a:hover {
+    text-decoration: underline;
+}
+
+.category_container {
+    margin-bottom: 4rem;
+    width: 100%;
+}
+
+.category_title {
+    font-size: var(--vitissimo-global-fontSize-700);
+    font-weight: var(--vitissimo-global-fontWeight-bold);
+    line-height: var(--vitissimo-global-lineHeight-300);
+    margin-bottom: 1rem;
+}
+
+.teams_container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}

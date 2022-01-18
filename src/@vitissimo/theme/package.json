@@ -1,0 +1,18 @@
+{
+  "name": "@vitissimo/theme",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "peerDependencies": {
+    "@magento/peregrine": "~10.0.0",
+    "@magento/pwa-buildpack": "~9.0.0",
+    "@magento/venia-ui": "~7.0.0",
+    "react": "~17.0.1",
+    "react-dom": "~17.0.1"
+  },
+  "pwa-studio": {
+    "targets": {
+      "intercept": "targets/local-intercept.js"
+    }
+  }
+}

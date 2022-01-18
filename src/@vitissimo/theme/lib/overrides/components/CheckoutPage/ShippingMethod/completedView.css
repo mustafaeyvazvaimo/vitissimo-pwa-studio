@@ -1,0 +1,55 @@
+.root {
+    height: 100%;
+}
+
+.contents {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 1.125rem;
+    text-align: left;
+}
+
+.editButton {
+    color: rgb(var(--vitissimo-global-color-red));
+    padding: 1rem;
+    margin: -1rem;
+}
+
+.editButtonText {
+    display: none;
+}
+
+.error {
+    align-self: center;
+    color: rgb(var(--vitissimo-global-color-error));
+    line-height: var(--vitissimo-global-lineHeight-300);
+}
+
+.free {
+    text-transform: uppercase;
+    font-weight: var(--vitissimo-global-fontWeight-bold);
+}
+
+.heading {
+    font-weight: var(--vitissimo-global-fontWeight-bold);
+}
+
+.titleContainer {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: 1fr;
+    padding-bottom: 1rem;
+}
+
+@media screen and (min-width: 768px) {
+    .editButton {
+        margin-top: -1.25rem;
+    }
+
+    .editButtonText {
+        display: block;
+        font-size: var(--vitissimo-typography-body-L-fontSize);
+        padding-top: 4px;
+    }
+}

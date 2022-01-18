@@ -1,0 +1,30 @@
+.root {
+    display: grid;
+    gap: 1.125rem;
+    padding: 1rem;
+}
+
+.heading_container {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: 1fr;
+}
+
+.heading {
+    font-weight: var(--vitissimo-global-fontWeight-bold);
+}
+
+.card_details_container {
+    display: grid;
+    gap: 0.5rem;
+    margin-top: 1.125rem;
+}
+
+.payment_details {
+}
+
+@media screen and (min-width: 480px) {
+    .root {
+        padding: 2rem;
+    }
+}

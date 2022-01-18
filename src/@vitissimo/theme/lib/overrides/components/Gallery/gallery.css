@@ -1,0 +1,35 @@
+.root {
+    display: grid;
+    grid-template-areas:
+        'actions'
+        'items';
+    grid-template-columns: 1fr;
+    line-height: 1;
+    margin-bottom: 1rem;
+}
+
+.items {
+    display: grid;
+    grid-area: items;
+    grid-gap: 1rem;
+    grid-template-columns: 1fr;
+    margin-bottom: 10px;
+}
+
+@media screen and (min-width: 480px) {
+    .items {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .items {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .root {
+        margin-left: 1rem;
+    }
+}

@@ -1,0 +1,65 @@
+.root {
+    display: grid;
+    gap: 1.5rem;
+    justify-items: stretch;
+    padding: 1rem;
+}
+
+.form {
+    display: grid;
+    row-gap: 0.9375rem;
+    max-width: 100%;
+}
+
+.modal {
+    visibility: hidden;
+    height: 100%;
+    width: 100%;
+    background-color: rgb(var(--vitissimo-global-color-gray-2));
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+}
+
+.modal_active {
+    visibility: visible;
+    composes: modal;
+    opacity: 0.9;
+}
+
+.buttonsContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-content: space-between;
+    padding-top: 1rem;
+    width: 100%;
+    border-top: var(--vitissimo-global-border);
+}
+
+.buttonsContainer button:first-child {
+    margin-bottom: 1rem;
+}
+
+.title {
+    padding-top: 0.5rem;
+    text-transform: capitalize;
+    padding-bottom: 1rem;
+    border-bottom: var(--vitissimo-global-border);
+}
+
+@media screen and (min-width: 480px) {
+    .buttonsContainer {
+        flex-direction: row;
+    }
+
+    .buttonsContainer button:first-child {
+        margin-bottom: unset;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .root {
+        padding: 1rem 1.5rem;
+    }
+}

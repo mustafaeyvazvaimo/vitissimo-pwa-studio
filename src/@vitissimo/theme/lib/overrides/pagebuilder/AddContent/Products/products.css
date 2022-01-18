@@ -1,0 +1,79 @@
+.root {
+    max-height: 350px;
+}
+
+.root a {
+    text-decoration: none;
+}
+
+.error {
+    text-align: center;
+    padding: 2rem 0;
+}
+
+.galleryItems {
+    composes: items from '../../../components/Gallery/gallery.css';
+    composes: root from '../../../components/Gallery/item.css';
+
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.centerModeSmall {
+}
+
+.centerModeSmall :global .slick-slide {
+    transition: 0.3s;
+
+    border-radius: 2px;
+    margin: 0 0.5rem;
+}
+
+.centerModeSmall :global .slick-slide:hover {
+    box-shadow: var(--vitissimo-global-box-shadow-gray);
+}
+
+@media screen and (min-width: 480px) {
+    .root {
+        max-height: 300px;
+    }
+
+    .galleryItems {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .root {
+        max-height: 400px;
+    }
+
+    .galleryItems {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .centerMode {
+    }
+
+    .centerMode :global .slick-slide {
+        transition: 0.3s;
+
+
+        border-radius: 2px;
+        margin: 0 0.5rem;
+    }
+
+    .centerMode :global .slick-slide:hover {
+        box-shadow: var(--vitissimo-global-box-shadow-gray);
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .root {
+        max-height: 500px;
+    }
+}
+
+.carousel {
+    composes: root;
+    composes: root from '../../Media/Slider/slider.css';
+}

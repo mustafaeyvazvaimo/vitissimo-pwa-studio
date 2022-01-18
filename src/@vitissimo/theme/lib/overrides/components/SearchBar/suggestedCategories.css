@@ -1,0 +1,15 @@
+.root {
+    border-top: var(--vitissimo-global-border);
+    display: grid;
+    gap: .75rem;
+    padding-top: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.item a:hover {
+    color: var(--vitissimo-global-color-red);
+}
+
+.root:empty {
+    display: none;
+}

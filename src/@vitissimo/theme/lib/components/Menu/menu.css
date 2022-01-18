@@ -1,0 +1,34 @@
+.root {
+    margin: 0;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: none;
+}
+
+.root ul {
+    margin: 0;
+    padding: 0;
+}
+
+.root li {
+    display: inline-block;
+    list-style: none;
+    text-transform: uppercase;
+    margin-left: 20px;
+    padding-bottom: 3px;
+}
+
+.root li:hover,
+.root li:active {
+    color: rgb(var(--vitissimo-global-color-red));
+    border-bottom: var(--vitissimo-global-border-bottom);
+    padding-bottom: unset;
+}
+
+@media screen and (min-width: 1024px) {
+    .root {
+        display: flex;
+        flex-direction: row;
+    }
+}

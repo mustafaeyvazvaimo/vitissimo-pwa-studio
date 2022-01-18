@@ -1,0 +1,159 @@
+import React, { Fragment, Suspense } from 'react';
+import { FormattedMessage, useIntl } from 'react-intl';
+
+import { useAccountInformationPage } from '@magento/peregrine/lib/talons/AccountInformationPage/useAccountInformationPage';
+
+import { Redirect } from '@vitissimo/theme/lib/drivers';
+
+import Button from '@magento/venia-ui/lib/components/Button';
+import { Message } from '@magento/venia-ui/lib/components/Field';
+import { StoreTitle } from '@magento/venia-ui/lib/components/Head';
+import { fullPageLoadingIndicator } from '@magento/venia-ui/lib/components/LoadingIndicator';
+
+import AccountInformationPageOperations from './accountInformationPage.gql';
+import classes from './accountInformationPage.css';
+
+const EditModal = React.lazy(() => import('./editModal'));
+
+const AccountInformationPage = props => {
+    const talonProps = useAccountInformationPage({
+        ...AccountInformationPageOperations
+    });
+
+    const {
+        handleCancel,
+        formErrors,
+        handleChangePassword,
+        handleSubmit,
+        initialValues,
+        isDisabled,
+        isSignedIn,
+        isUpdateMode,
+        loadDataError,
+        shouldShowNewPassword,
+        showUpdateMode
+    } = talonProps;
+    const { formatMessage } = useIntl();
+
+    if (!isSignedIn) {
+        return <Redirect to="/" />;
+    }
+
+    const errorMessage = loadDataError ? (
+        <Message>
+            <FormattedMessage
+                id={'accountInformationPage.errorTryAgain'}
+                defaultMessage={
+                    'Something went wrong. Please refresh and try again.'
+                }
+            />
+        </Message>
+    ) : null;
+
+    let pageContent = null;
+    if (!initialValues) {
+        return fullPageLoadingIndicator;
+    } else {
+        const { customer } = initialValues;
+        const customerName = `${customer.firstname} ${customer.lastname}`;
+        const passwordValue = '***********';
+
+        pageContent = (
+            <Fragment>
+                <div className={classes.accountDetails}>
+                    <div className={classes.lineItemsContainer}>
+                        <div>
+                            <span className={classes.nameLabel}>
+                                <FormattedMessage
+                                    id={'global.name'}
+                                    defaultMessage={'Name'}
+                                />
+                            </span>
+                            <span className={classes.nameValue}>
+                                {customerName}
+                            </span>
+                        </div>
+                        <div>
+                            <span className={classes.emailLabel}>
+                                <FormattedMessage
+                                    id={'global.email'}
+                                    defaultMessage={'Email'}
+                                />
+                            </span>
+                            <span className={classes.emailValue}>
+                                {customer.email}
+                            </span>
+                        </div>
+                        <div>
+                            <span className={classes.passwordLabel}>
+                                <FormattedMessage
+                                    id={'global.password'}
+                                    defaultMessage={'Password'}
+                                />
+                            </span>
+                            <span className={classes.passwordValue}>
+                                {passwordValue}
+                            </span>
+                        </div>
+                        <div>
+                            <span className={classes.accountCreatedLabel}>
+                                <FormattedMessage
+                                    id={'global.accountCreated'}
+                                    defaultMessage={'Account aangemaakt op'}
+                                />
+                            </span>
+                            <span className={classes.accountCreatedValue}>
+                                {customer.created_at.substr(0, 10)}
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div className={classes.editButtonContainer}>
+                    <Button
+                        className={classes.editInformationButton}
+                        disabled={false}
+                        onClick={showUpdateMode}
+                        priority="high"
+                    >
+                        <FormattedMessage
+                            id={'global.editButton'}
+                            defaultMessage={'Edit'}
+                        />
+                    </Button>
+                </div>
+                <Suspense fallback={null}>
+                    <EditModal
+                        formErrors={formErrors}
+                        initialValues={customer}
+                        isDisabled={isDisabled}
+                        isOpen={isUpdateMode}
+                        onCancel={handleCancel}
+                        onChangePassword={handleChangePassword}
+                        onSubmit={handleSubmit}
+                        shouldShowNewPassword={shouldShowNewPassword}
+                    />
+                </Suspense>
+            </Fragment>
+        );
+    }
+
+    return (
+        <div className={classes.root}>
+            <StoreTitle>
+                {formatMessage({
+                    id: 'accountInformationPage.titleAccount',
+                    defaultMessage: 'Account Information'
+                })}
+            </StoreTitle>
+            <h1 className={classes.title}>
+                <FormattedMessage
+                    id={'accountInformationPage.accountInformation'}
+                    defaultMessage={'Account Information'}
+                />
+            </h1>
+            {errorMessage ? errorMessage : pageContent}
+        </div>
+    );
+};
+
+export default AccountInformationPage;

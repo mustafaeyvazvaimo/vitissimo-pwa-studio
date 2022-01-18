@@ -1,0 +1,93 @@
+.root {
+    position: sticky;
+    top: 0;
+    z-index: 99;
+    margin: 0;
+    width: 100%;
+}
+
+.header {
+    background-color: rgb(var(--vitissimo-global-color-white));
+    margin: auto;
+    margin-bottom: -6px;
+    display: grid;
+    grid-auto-columns: 100%;
+    justify-items: center;
+    width: 100%;
+    max-width: var(--vitissimo-global-maxWidth);
+    padding: 0 1rem;
+}
+
+.primaryHeader {
+    margin: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: center;
+}
+
+.navigationContainer {
+    display: block;
+    margin-left: -15px;
+    margin-top: 5px;
+}
+
+.logoContainer {
+    margin: 0;
+    margin-right: 35px;
+    padding: 0;
+}
+
+.searchTrigger {
+    display: block;
+    margin: 0;
+}
+
+.searchContainer {
+    display: none;
+}
+
+.accountContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-top: 5px;
+}
+
+@media screen and (min-width: 768px) {
+    .header {
+        margin-bottom: -4px;
+    }
+    .primaryHeader {
+        height: unset;
+    }
+    .accountContainer,
+    .navigationContainer {
+        margin-top: 10px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .header {
+        margin-bottom: -1px;
+    }
+    .primaryHeader {
+        display: grid;
+        justify-self: center;
+        grid-template-columns: repeat(3, minmax(300px, 1fr));
+    }
+    .searchTrigger {
+        display: none;
+    }
+    .searchContainer {
+        display: block;
+        margin: 20px auto;
+    }
+    .navigationContainer {
+        display: none;
+    }
+    .accountContainer {
+        margin-top: unset;
+    }
+}

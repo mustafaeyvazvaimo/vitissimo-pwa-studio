@@ -1,0 +1,14 @@
+.root {
+    align-items: center;
+    justify-items: center;
+    column-gap: 0.5rem;
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: auto;
+    font-weight: var(--vitissimo-global-fontWeight-bold);
+    font-size: var(--vitissimo-global-typography-heading-L-fontSize);
+}
+
+.loader {
+    composes: indicator from '~@vitissimo/theme/lib/overrides/components/LoadingIndicator/indicator.css';
+}

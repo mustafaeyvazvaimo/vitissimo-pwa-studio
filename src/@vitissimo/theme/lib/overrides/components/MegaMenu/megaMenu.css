@@ -1,0 +1,32 @@
+.root {
+    width: 100%;
+    margin: 0;
+    text-align: center;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: center;
+}
+
+.menuItemList,
+.menu {
+    display: none;
+}
+
+@media screen and (min-width: 1024px) {
+    .root {
+        margin: 15px 0;
+    }
+    .menuItemList {
+        display: flex;
+        flex-direction: row;
+        margin: 0 20px;
+        margin-left: 0;
+        padding: 0;
+        text-transform: uppercase;
+    }
+    .menu {
+        display: block;
+    }
+}

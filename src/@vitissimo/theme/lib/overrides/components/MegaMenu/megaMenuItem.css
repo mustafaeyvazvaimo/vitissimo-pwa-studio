@@ -1,0 +1,30 @@
+.root {
+    padding: 0 10px;
+}
+
+.root:first-child {
+    padding-left: 0;
+}
+
+.link {
+    align-items: center;
+    display: inline-flex;
+    text-decoration: none;
+}
+
+.active {
+    composes: link;
+    color: rgb(var(--vitissimo-global-color-red));
+    border-bottom: var(--vitissimo-global-border-bottom);
+}
+
+.root:hover > div,
+.root:focus > div {
+    display: flex;
+}
+
+.root:hover .link,
+.root:focus .link {
+    color: rgb(var(--vitissimo-global-color-red));
+    border-bottom: var(--vitissimo-global-border-bottom);
+}

@@ -1,0 +1,28 @@
+.root {
+    composes: root from './tile.css';
+
+    background: var(--vitissimo-swatch-bg);
+    color: rgb(var(--vitissimo-global-color-white));
+    width: 3rem;
+    --vitissimo-swatch-bg: var(--vitissimo-global-color-gray-8);
+}
+
+.root_selected {
+    composes: root;
+
+    background: linear-gradient(-45deg, rgba(0, 0, 0, 0.2), transparent),
+        var(--vitissimo-swatch-bg);
+}
+
+.root_focused {
+    composes: root;
+}
+
+.root_selected_focused {
+    composes: root_selected;
+}
+
+.root:hover {
+    background: var(--vitissimo-swatch-bg);
+    color: rgb(var(--vitissimo-global-color-white));
+}

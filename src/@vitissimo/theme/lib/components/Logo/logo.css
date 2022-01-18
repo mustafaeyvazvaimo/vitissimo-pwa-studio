@@ -1,0 +1,43 @@
+.root {
+    width: 100px;
+    margin: 15px 0;
+    display: flex;
+    flex-direction: row;
+}
+
+.sportlogo {
+    width: 30px;
+    height: 100%;
+}
+
+.logo {
+    width: 100%;
+    height: 100%;
+}
+
+@media screen and (min-width: 480px) {
+    .root {
+        width: 150px;
+    }
+    .sportlogo {
+        width: 40px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .root {
+        width: 200px;
+    }
+    .sportlogo {
+        width: 55px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .root {
+        width: 225px;
+    }
+    .sportlogo {
+        width: 65px;
+    }
+}

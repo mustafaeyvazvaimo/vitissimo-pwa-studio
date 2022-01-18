@@ -1,0 +1,86 @@
+.root {
+    border: var(--vitissimo-global-border-small);
+    padding: 1rem;
+    border-radius: 2px;
+}
+
+.images {
+    display: grid;
+    grid-template-areas: 'main';
+    margin-bottom: 0.65rem;
+}
+
+.imageContainer {
+    grid-area: main;
+}
+
+.image {
+    display: block;
+    height: auto;
+    max-height: 100%;
+    opacity: 1;
+    transition-duration: 512ms;
+    transition-property: opacity, visibility;
+    transition-timing-function: ease-out;
+    visibility: visible;
+    width: 100%;
+    max-width: 100%;
+}
+
+.imagePlaceholder {
+    composes: image;
+    background-color: rgb(var(--vitissimo-global-color-gray-9));
+}
+
+.name,
+.price {
+    min-height: 1rem;
+    font-size: var(--vitissimo-typography-detail-XL-fontSize);
+}
+
+.name {
+    font-weight: var(--vitissimo-global-fontWeight-bold);
+}
+
+.price {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-bottom: 0.5rem;
+}
+
+.description {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.fav {
+    margin: 0;
+}
+
+/* state: pending */
+
+.root_pending {
+    composes: root;
+}
+
+.image_pending {
+    composes: image;
+    background-color: rgb(var(--vitissimo-global-color-gray-9));
+}
+
+.images_pending {
+    composes: images;
+}
+
+.name_pending {
+    composes: name;
+    background-color: rgb(var(--vitissimo-global-color-gray-9));
+}
+
+.price_pending {
+    composes: price;
+    background-color: rgb(var(--vitissimo-global-color-gray-9));
+    width: 3rem;
+}

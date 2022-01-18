@@ -1,0 +1,4 @@
+extend type StoreConfig {
+    payment_payable_to: String
+    payment_mailing_address: String
+}

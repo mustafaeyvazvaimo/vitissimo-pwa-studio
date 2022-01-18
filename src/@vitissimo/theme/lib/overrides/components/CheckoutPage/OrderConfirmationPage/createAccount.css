@@ -1,0 +1,35 @@
+.root {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 1rem;
+    border: var(--vitissimo-global-border);
+}
+
+.form {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+}
+
+.actions {
+    text-align: center;
+}
+
+.create_account_button {
+    composes: root_highPriority from '~@vitissimo/theme/lib/overrides/components/Button/button.css';
+}
+
+@media screen and (min-width: 480px) {
+    .root {
+        border-radius: 0.375rem;
+        padding: 2rem;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .root {
+        position: sticky;
+        top: 12rem;
+    }
+}

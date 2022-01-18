@@ -1,0 +1,83 @@
+.root {
+    display: grid;
+    padding: 2.5rem 1rem;
+    row-gap: 2rem;
+}
+
+.title {
+    justify-self: center;
+    font-weight: var(--vitissimo-global-fontWeight-bold);
+}
+
+.accountDetails {
+    display: grid;
+    row-gap: 2rem;
+    grid-template-columns: 1fr;
+    border: var(--vitissimo-global-border);
+    padding: 1rem;
+    border-radius: 0.375rem;
+}
+
+.lineItemsContainer {
+    grid-column: 1 / span 1;
+    display: grid;
+    line-height: 1.5rem;
+    grid-template-columns: 1fr;
+    grid-gap: 0.75rem;
+}
+
+.lineItemsContainer div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.lineItemLabel {
+    font-weight: var(--vitissimo-global-fontWeight-bold);
+}
+
+.nameLabel,
+.emailLabel,
+.passwordLabel,
+.accountCreatedLabel {
+    composes: lineItemLabel;
+}
+
+.nameValue,
+.emailValue,
+.passwordValue,
+.accountCreatedValue {
+}
+
+.editButtonContainer {
+    grid-column: 1 / span 1;
+    text-align: center;
+}
+
+.editInformationButton {
+    composes: root_highPriority from '../Button/button.css';
+}
+
+@media screen and (min-width: 480px) {
+    .root {
+        padding: 2.5rem 3rem;
+    }
+
+    .lineItemsContainer div {
+        flex-direction: row;
+    }
+
+    .nameValue,
+    .emailValue,
+    .passwordValue,
+    .accountCreatedValue {
+        text-align: right;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .accountDetails {
+        margin: auto;
+        width: 480px;
+    }
+}

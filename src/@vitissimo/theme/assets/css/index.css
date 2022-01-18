@@ -1,0 +1,120 @@
+@font-face {
+    font-family: 'Sport2000';
+    src: url('../font/Sport2000-Regular.otf') format('opentype');
+}
+
+@import './tokens.css';
+
+:global(*) {
+    box-sizing: border-box;
+}
+
+:global(html) {
+    background-color: rgb(var(--vitissimo-global-color-white));
+    font-size: 100%;
+    font-weight: var(--vitissimo-global-fontWeight-normal);
+    line-height: var(--vitissimo-global-lineHeight-100);
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+}
+
+:global(body),
+:global(button),
+:global(input),
+:global(select),
+:global(textarea) {
+    color: rgb(var(--vitissimo-global-color-text));
+    font-family: var(--vitissimo-global-fontFamily);
+}
+
+:global(body) {
+    background-color: rgb(var(--vitissimo-global-color-white));
+    margin: 0;
+    padding: 0;
+}
+
+:global(h1),
+:global(h2),
+:global(h3),
+:global(h4),
+:global(h5),
+:global(h6) {
+    font-size: var(--vitissimo-global-fontSize-200);
+    font-weight: var(--vitissimo-global-fontWeight-normal);
+    margin: 0;
+}
+
+:global(h1) {
+    font-size: var(--vitissimo-global-fontSize-600);
+}
+
+:global(h2) {
+    font-size: var(--vitissimo-global-fontSize-400);
+}
+
+:global(a) {
+    color: currentColor;
+    text-decoration: none;
+}
+
+:global(p) {
+    margin: 0;
+}
+
+:global(dl),
+:global(ol),
+:global(ul) {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+:global(dd),
+:global(dt) {
+    margin: 0;
+}
+
+:global(button) {
+    background: none;
+    border: 0;
+    cursor: pointer;
+    font-size: 100%;
+    padding: 0;
+    touch-action: manipulation;
+    user-select: none;
+    -webkit-appearance: none;
+}
+
+:global(button:disabled) {
+    cursor: default;
+    touch-action: none;
+}
+
+:global(::selection) {
+    background: rgb(var(--vitissimo-global-color-red-8));
+}
+
+:global(._wPDyp) {
+    flex: 0 0 calc(100% / 1 - 10px);
+}
+
+:global(.adresgegevens a) {
+    color: rgb(var(--vitissimo-global-color-red));
+}
+
+:global(.adresgegevens a:hover) {
+    color: rgb(var(--vitissimo-global-color-black));
+}
+
+:global(.openingsuren p) {
+    padding: 2px 0;
+    border: none;
+    line-height: var(--vitissimo-global-lineHeight-100);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+:global(.closed) {
+    color: rgb(var(--vitissimo-global-color-red));
+}

@@ -1,0 +1,32 @@
+.root {
+    border-bottom: var(--vitissimo-global-border);
+    display: grid;
+    gap: 1rem;
+    padding-bottom: 1rem;
+}
+
+.imageContainer {
+    justify-self: center;
+}
+
+.image {
+    padding: 0 2rem;
+    padding-bottom: 2rem;
+}
+
+.productName {
+    font-size: var(--vitissimo-global-typography-heading-XL-fontSize);
+    font-weight: var(--vitissimo-global-fontWeight-bold);
+    display: flex;
+    justify-content: space-between;
+}
+
+.stockRow {
+    font-weight: var(--vitissimo-global-fontWeight-normal);
+    font-size: var(--vitissimo-typography-body-S-fontSize);
+    padding-top: 5px;
+}
+
+.price {
+    font-weight: var(--vitissimo-global-fontWeight-bold);
+}

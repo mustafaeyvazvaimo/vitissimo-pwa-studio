@@ -1,0 +1,22 @@
+.root {
+    border-top: var(--vitissimo-global-border);
+    margin-top: 1rem;
+    padding-top: 2rem;
+}
+
+.title {
+    position: absolute;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+    clip: rect(1px, 1px, 1px, 1px);
+    white-space: nowrap;
+}
+
+@media screen and (min-width: 1024px) {
+    .root {
+        margin-top: 0;
+        padding-top: 0;
+        border-top: unset;
+    }
+}

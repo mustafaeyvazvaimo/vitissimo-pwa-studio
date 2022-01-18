@@ -1,0 +1,49 @@
+.root {
+    align-items: center;
+    color: rgb(var(--vitissimo-global-color-black));
+    display: grid;
+    gap: 0.75rem;
+    grid-auto-flow: column;
+    grid-template-areas: 'input label';
+    grid-template-columns: min-content 1fr;
+    margin: 0;
+    justify-items: center;
+    line-height: 1.5rem;
+    cursor: pointer;
+}
+
+.input {
+    -webkit-appearance: none;
+    background: none;
+    background-clip: content-box;
+    border: 6px solid transparent;
+    border-radius: 50%;
+    grid-area: input;
+    height: 1.5rem;
+    margin: 0;
+    width: 1.5rem;
+    z-index: 2;
+}
+
+.icon {
+    grid-area: input;
+    height: 1.5rem;
+    width: 1.5rem;
+    z-index: 1;
+}
+
+.input:checked {
+    background-color: rgb(var(--vitissimo-global-color-black));
+}
+
+.label {
+    font-size: var(--vitissimo-typography-body-M-fontSize);
+    grid-area: label;
+    justify-self: start;
+    padding-top: 5px;
+}
+
+.input:active,
+.input:focus {
+    outline: none;
+}

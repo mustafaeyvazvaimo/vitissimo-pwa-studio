@@ -1,0 +1,30 @@
+.root {
+    display: grid;
+    grid-auto-flow: row;
+    justify-content: stretch;
+    row-gap: 1rem;
+    padding: 1.5rem;
+}
+
+.link {
+    composes: root from '../LinkButton/linkButton.css';
+
+    justify-content: start;
+}
+
+.link:first-of-type {
+    padding-top: 1rem;
+    border-top: var(--vitissimo-global-border);
+}
+
+.link:last-of-type {
+    padding-bottom: 1rem;
+    border-bottom: var(--vitissimo-global-border);
+}
+
+.signOut {
+    composes: root_highPriority from '../Button/button.css';
+
+    width: 7rem;
+    justify-self: end;
+}

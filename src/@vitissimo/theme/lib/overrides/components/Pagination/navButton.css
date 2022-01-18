@@ -1,0 +1,6 @@
+.root {
+    composes: root from './tile.css';
+
+    border: none;
+    padding-top: 0;
+}

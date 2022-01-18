@@ -1,0 +1,27 @@
+.root {
+    margin: auto;
+    width: 100%;
+}
+
+.hours {
+    font-weight: var(--vitissimo-global-fontWeight-bold);
+}
+
+.hours p {
+    margin-right: 1px;
+}
+
+@media screen and (min-width: 1024px) {
+    .hours {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        font-size: var(--vitissimo-global-fontSize-100);
+    }
+
+    .hours p {
+        margin-right: 5px;
+    }
+}
+
+

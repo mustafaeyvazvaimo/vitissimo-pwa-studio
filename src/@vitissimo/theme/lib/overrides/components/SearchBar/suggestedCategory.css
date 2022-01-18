@@ -1,0 +1,11 @@
+.root {
+    padding: 1rem 0.5rem;
+}
+
+.hover:hover {
+    color: rgb(var(--vitissimo-global-color-red));
+}
+
+.categoryName {
+    font-weight: var(--vitissimo-global-fontWeight-bold);
+}

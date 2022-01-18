@@ -1,0 +1,9 @@
+.heading {
+    color: rgb(var(--vitissimo-global-color-text-alt));
+    font-size: 0.875rem;
+    padding: 1rem;
+    text-transform: uppercase;
+    text-align: center;
+    border-top: var(--vitissimo-global-button-border-red);
+    border-bottom: var(--vitissimo-global-border);
+}

@@ -1,0 +1,16 @@
+.input {
+    composes: input from '~@magento/venia-ui/lib/components/Field/field.css';
+
+    border: var(--vitissimo-global-input-border);
+    padding-bottom: 1px;
+}
+
+.input:disabled {
+    color: rgb(var(--vitissimo-global-color-gray-darker));
+}
+
+.input_error {
+    composes: input;
+
+    background: rgb(var(--vitissimo-global-color-red-8));
+}

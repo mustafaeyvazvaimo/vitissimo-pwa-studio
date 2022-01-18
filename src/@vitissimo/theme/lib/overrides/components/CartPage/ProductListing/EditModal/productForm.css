@@ -1,0 +1,53 @@
+.contents {
+    padding: 1rem;
+    position: relative;
+}
+
+.optionRoot {
+    border-bottom: var(--vitissimo-global-border);
+    padding: 1rem 0;
+}
+
+.quantityLabel {
+    font-size: var(--vitissimo-typography-body-L-fontSize);
+    font-weight: var(--vitissimo-global-fontWeight-bold);
+    line-height: var(--vitissimo-global-lineHeight-300);
+    margin-bottom: 1.5rem;
+    padding-top: 1rem;
+}
+
+.quantityWrapper {
+    margin: auto;
+    padding-bottom: 1rem;
+    border-bottom: var(--vitissimo-global-border);
+}
+
+.quantityRoot {
+    composes: root from '~@vitissimo/theme/lib/overrides/components/CartPage/ProductListing/quantity.css';
+
+    display: grid;
+    padding: 0 1rem;
+}
+
+.loading {
+    composes: root from '~@magento/venia-ui/lib/components/LoadingIndicator/indicator.css';
+
+    height: unset;
+    left: 0;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+}
+
+.dataError {
+    color: rgb(var(--vitissimo-global-color-error));
+    display: inline-block;
+    padding-top: 1rem;
+    line-height: var(--vitissimo-global-lineHeight-300);
+}
+
+.errorContainer {
+    padding-top: 1rem;
+}

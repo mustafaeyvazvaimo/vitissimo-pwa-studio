@@ -1,0 +1,25 @@
+.root {
+    align-items: center;
+    border-bottom: var(--vitissimo-global-border);
+    display: flex;
+    margin: 0 1.25rem;
+}
+
+.target {
+    align-items: center;
+    display: flex;
+    flex: auto;
+    height: 3.5rem;
+    justify-content: space-between;
+    margin: 0 -1.25rem;
+    padding: 0 1.5rem;
+    width: 100%;
+}
+
+.text {
+    display: inline-block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: var(--vitissimo-global-fontSize-300);
+}

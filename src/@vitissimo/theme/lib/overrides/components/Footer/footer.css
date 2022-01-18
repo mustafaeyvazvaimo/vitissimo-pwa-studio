@@ -1,0 +1,148 @@
+.root {
+    color: rgb(var(--vitissimo-global-color-black));
+    display: grid;
+    font-size: var(--vitissimo-typography-body-S-fontSize);
+    grid-template-columns: 100%;
+    line-height: var(--vitissimo-global-lineHeight-100);
+    margin: auto;
+    max-width: var(--vitissimo-global-maxWidth);
+    min-height: 9rem;
+    padding-top: 2rem;
+    padding-bottom: 3rem;
+    row-gap: 2rem;
+    width: 100%;
+}
+
+/* vitissimo logo */
+.logo {
+    margin: auto;
+    padding-right: 3rem;
+}
+
+@media screen and (min-width: 480px) {
+    .logo {
+        margin: 0 25px;
+        padding-right: unset;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .logo {
+        margin: 0 15px;
+    }
+}
+
+/* wrapper around blocks */
+.wrapper {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    display: grid;
+    grid-auto-columns: 12rem;
+    grid-auto-flow: auto;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    text-align: center;
+}
+
+@media screen and (min-width: 480px) {
+    .wrapper {
+        text-align: left;
+        padding: 0 2rem;
+        grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .wrapper {
+        padding-left: 1rem;
+    }
+}
+
+/* adress info block */
+.address {
+    margin: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+}
+
+.address div {
+    margin: 0;
+    padding: 0;
+}
+
+.address a {
+    color: rgb(var(--vitissimo-global-color-red));
+}
+
+.address a:hover,
+.address a:active {
+    color: rgb(var(--vitissimo-global-color-black));
+}
+
+/* info block */
+.info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* sitemap block */
+.sitemap {
+    display: none;
+}
+
+@media screen and (min-width: 1024px) {
+    .sitemap {
+        display: block;
+    }
+    .info,
+    .address {
+        margin-bottom: unset;
+    }
+}
+
+/* instagram widget */
+.widget {
+    width: 100%;
+    margin: 0;
+}
+
+/* Sport 2000 bar above the subFooter */
+.redBar {
+    max-width: 500px;
+}
+
+/* subFooter */
+.branding {
+    padding: 2.5rem 2rem 4rem;
+    width: 100%;
+    margin-top: 0.4rem;
+    text-align: center;
+    background-color: rgb(var(--vitissimo-global-color-black));
+    color: rgb(var(--vitissimo-global-color-white));
+    font-size: var(--vitissimo-global-fontSize-75);
+}
+
+@media screen and (min-width: 480px) {
+    .branding {
+        font-size: var(--vitissimo-global-fontSize-100);
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .branding {
+        height: 4rem;
+        padding: 1.5rem 0;
+        margin-top: 0.35rem;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .branding {
+        font-size: var(--vitissimo-global-fontSize-200);
+    }
+}

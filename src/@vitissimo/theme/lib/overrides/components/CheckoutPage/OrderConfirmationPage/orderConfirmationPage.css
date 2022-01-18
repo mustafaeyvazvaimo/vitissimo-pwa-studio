@@ -1,0 +1,88 @@
+.root {
+    padding: 2.5rem 1rem;
+    max-width: var(--vitissimo-global-maxWidth);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+.mainContainer {
+    grid-column: 1;
+    display: grid;
+    row-gap: 1rem;
+}
+
+.sidebarContainer {
+    grid-column: 1;
+    grid-row: auto;
+    height: auto;
+}
+
+.header {
+    font-weight: var(--vitissimo-global-fontWeight-bold);
+}
+
+.text {
+    line-height: var(--vitissimo-global-lineHeight-300);
+}
+
+.orderNumber {
+    composes: header;
+}
+
+.shippingInfoHeading {
+    composes: header;
+
+    margin-bottom: 1rem;
+}
+
+.shippingInfo {
+    composes: text;
+
+    display: grid;
+    padding: 1rem;
+    border: var(--vitissimo-global-border);
+}
+
+.shippingAddress {
+    display: grid;
+}
+
+.shippingMethodHeading {
+    composes: header;
+
+    margin-bottom: 1rem;
+}
+
+.shippingMethod {
+    composes: text;
+
+    padding: 1rem;
+    border: var(--vitissimo-global-border);
+}
+
+.additionalText {
+    composes: text;
+
+    text-align: center;
+}
+
+@media screen and (min-width: 480px) {
+    .shippingInfo,
+    .shippingMethod {
+        border-radius: 0.375rem;
+        padding: 2rem;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .root {
+        gap: 2rem;
+        grid-template-columns: 2fr 1fr;
+    }
+
+    .sidebarContainer {
+        grid-column: 2;
+    }
+}

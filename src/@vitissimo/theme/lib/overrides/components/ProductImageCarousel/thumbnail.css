@@ -1,0 +1,50 @@
+/** The "thumbnail" is a round pil button below the product image in mobile or
+ * as a thumbnail to the left of the product image in desktop.
+ */
+.root {
+    border: 1px solid rgb(var(--vitissimo-global-color-black));
+    background: rgb(var(--vitissimo-global-color-black));
+    border-radius: 50%;
+    height: 0.875rem;
+    width: 0.875rem;
+    box-shadow: 0 0 0 1px rgb(var(--vitissimo-global-color-white));
+    outline: none;
+}
+
+.rootSelected {
+    composes: root;
+
+    background-color: rgb(var(--vitissimo-global-color-red));
+}
+
+.image {
+    display: none;
+}
+
+/* For desktop mode where buttons are an image... */
+@media screen and (min-width: 1024px) {
+    .root {
+        border: var(--vitissimo-global-border-small);
+        background: rgb(var(--vitissimo-global-color-white));
+        border-radius: 3px;
+        padding: 0.2rem;
+        height: 5rem;
+        width: 4rem;
+    }
+    .rootSelected {
+        composes: root;
+
+        box-shadow: var(--vitissimo-global-box-shadow-gray);
+    }
+
+    .image {
+        background-color: rgb(var(--vitissimo-global-color-white));
+        box-shadow: 0 0 0 1px rgb(var(--vitissimo-global-color-white));
+        border-radius: 3px;
+        display: block;
+        height: 100%;
+        object-fit: contain;
+        object-position: center;
+        width: 100%;
+    }
+}
